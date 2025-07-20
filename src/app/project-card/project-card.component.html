@@ -1,0 +1,33 @@
+<div class="project-card">
+  <div class="project-content">
+    <h3 class="project-title">{{project.name}}</h3>
+    <p class="project-description">{{project.description}}</p>
+    
+    <div class="project-tech">
+      <div class="tech-item">
+        <i class="fas fa-desktop"></i>
+        <span class="tech-label">Frontend:</span>
+        <span class="tech-value">{{project.frontEnd}}</span>
+      </div>
+      
+      <div class="tech-item">
+        <i class="fas fa-server"></i>
+        <span class="tech-label">Backend:</span>
+        <span class="tech-value">{{project.backEnd}}</span>
+      </div>
+      
+      <div class="tech-item">
+        <i class="fas fa-database"></i>
+        <span class="tech-label">Database:</span>
+        <span class="tech-value">{{project.database}}</span>
+      </div>
+    </div>
+    
+    <div class="project-footer">
+      <a href={{project.projectLink}} target="_blank" class="project-link">
+        <i class="fab fa-github"></i>
+        <span>Voir le code</span>
+      </a>
+    </div>
+  </div>
+</div>

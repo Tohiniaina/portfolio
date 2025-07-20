@@ -1,0 +1,149 @@
+.up-btn {
+  background-color: #d4ac66e9;
+  padding: 15px;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.footer-section {
+  background-color: var(--surface-dark);
+  position: relative;
+  padding: 1rem 0;
+}
+
+.footer-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.footer-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.scroll-top-btn {
+  background: rgba(108, 99, 255, 0.1);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.scroll-top-btn i {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.scroll-top-btn:hover i {
+  color: white;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.footer-brand h4 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-link {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--primary-color);
+}
+
+.social-link:hover::after {
+  width: 100%;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 0 1rem;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-social {
+    gap: 2rem;
+  }
+
+  .social-link {
+    font-size: 1.4rem;
+  }
+}
