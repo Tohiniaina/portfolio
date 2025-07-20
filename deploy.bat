@@ -1,3 +1,3 @@
 git add .
-git commit -m 'change'
+git commit -m "update portfolio"
 git push
