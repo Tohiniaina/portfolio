@@ -4,6 +4,7 @@
 
 .functions-section {
   background-color: var(--background-dark);
+  padding-top: 50px;
   position: relative;
 }
 
