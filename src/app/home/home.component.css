@@ -1,5 +1,5 @@
 .btn-cv {
-  background: #cea255e9;
+  background: var(--accent-gold);
 }
 
 .btn-cv:hover {
@@ -7,7 +7,7 @@
 }
 
 .profil-picture {
-  border: solid #cea255e9 6px !important;
+  border: solid var(--accent-gold) 6px !important;
 }
 
 .home-section {

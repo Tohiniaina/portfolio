@@ -3,18 +3,20 @@
     <h4><span class="highlight">Code</span>x.</h4>
   </div>
 
-  <!-- Bouton hamburger -->
-  <div class="menu-toggle" (click)="toggleMenu()">
-    &#9776;
-  </div>
-
-  <!-- Menu des liens -->
-  <div class="navbar-links" [class.active]="menuOpen">
+  <div class="navbar-right">
+    <!-- <button class="theme-toggle" (click)="themeService.toggleTheme()" [attr.aria-label]="themeService.isDark ? 'Activer le mode clair' : 'Activer le mode sombre'" title="{{ themeService.isDark ? 'Mode clair' : 'Mode sombre' }}">
+      <span class="theme-icon" *ngIf="themeService.isDark">☀</span>
+      <span class="theme-icon" *ngIf="!themeService.isDark">🌙</span>
+    </button> -->
+    <div class="menu-toggle" (click)="toggleMenu()">&#9776;</div>
+    <div class="navbar-links" [class.active]="menuOpen">
     <a class="nav-link" (click)="scrollToElement('abouts')"> <span class="link-text">A propos</span><span class="link-underline"></span></a>
     <a class="nav-link" (click)="scrollToElement('domaines')"> <span class="link-text">Domaines</span><span class="link-underline"></span></a>
     <a class="nav-link" (click)="scrollToElement('skills')"> <span class="link-text">Compétences</span><span class="link-underline"></span></a>
     <a class="nav-link" (click)="scrollToElement('experience')"> <span class="link-text">Expériences</span><span class="link-underline"></span></a>
+    <a class="nav-link" (click)="scrollToElement('certifications')"> <span class="link-text">Certifications</span><span class="link-underline"></span></a>
     <a class="nav-link" (click)="scrollToElement('projets')"> <span class="link-text">Projets</span><span class="link-underline"></span></a>
     <a class="nav-link" (click)="scrollToElement('contact')"> <span class="link-text">Contact</span><span class="link-underline"></span></a>
+    </div>
   </div>
 </nav>

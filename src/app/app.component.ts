@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { ThemeService } from './_services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,12 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./app.component.css','./edit-form.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private themeService: ThemeService
+  ) {}
   ngOnInit(): void {
+    this.themeService.initTheme();
   }
   title = 'Codex';
 }

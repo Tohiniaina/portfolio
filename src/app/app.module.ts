@@ -17,6 +17,7 @@ import { ProjetsComponent } from './projets/projets.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { MonFonctionComponent } from './mon_fonction/mon_fonction.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { CertificationsComponent } from './certifications/certifications.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ExperienceComponent } from './experience/experience.component';
     FooterComponent,
     ProjetsComponent,
     MonFonctionComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    CertificationsComponent
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@ a {
 }
 
 a:hover {
-  color: #cea255e9 !important;
+  color: var(--accent-gold) !important;
 }
 
 .navbar {
@@ -19,7 +19,7 @@ a:hover {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .navbar-brand h4 {
@@ -96,13 +96,45 @@ a:hover {
 }
 
 
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.theme-toggle {
+  background: transparent !important;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  color: var(--text-primary);
+}
+
+.theme-toggle:hover {
+  background-color: rgba(108, 99, 255, 0.15);
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.theme-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #1e1e2f;
-  color: white;
+  background-color: var(--surface-dark);
+  color: var(--text-primary);
 }
 
 .navbar-brand h4 {
@@ -116,7 +148,7 @@ a:hover {
 
 .nav-link {
   text-decoration: none;
-  color: white;
+  color: var(--text-secondary);
   position: relative;
 }
 
@@ -125,6 +157,7 @@ a:hover {
   display: none;
   font-size: 2rem;
   cursor: pointer;
+  color: var(--text-primary);
 }
 
 /* Responsive */
@@ -139,7 +172,7 @@ a:hover {
     position: absolute;
     top: 60px;
     right: 0;
-    background-color: #1e1e2f;
+    background-color: var(--surface-dark);
     width: 100%;
     padding: 1rem;
   }

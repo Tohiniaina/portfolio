@@ -1,4 +1,5 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
+import { ThemeService } from '../_services/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,7 @@ import { Component, ElementRef } from '@angular/core';
 })
 export class HeaderComponent {
   menuOpen = false;
-  constructor(private elementRef: ElementRef) {}
+  constructor(public themeService: ThemeService) {}
 
   scrollToElement(target: string): void {
     const ele = document.getElementById(target);

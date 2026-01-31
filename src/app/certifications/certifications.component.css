@@ -1,0 +1,142 @@
+.certifications-section {
+  padding: 100px 0;
+  background-color: var(--background-dark);
+  position: relative;
+  scroll-margin-top: 100px;
+}
+
+.certifications-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(108, 99, 255, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.certifications-content {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  color: var(--text-primary);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+.certifications-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.certification-card {
+  background-color: var(--surface-dark);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.certification-image-container {
+  width: 100%;
+  padding: 1.5rem 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(108, 99, 255, 0.08), transparent);
+}
+
+.certification-image-container a {
+  cursor: pointer;
+  display: inline-block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.certification-image-container a:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.certification-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.certification-info {
+  padding: 1.5rem 2rem 2rem;
+  text-align: center;
+}
+
+.certification-title {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.certification-date {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.certification-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .certification-card {
+    max-width: 100%;
+  }
+
+  .certification-info {
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  .certification-title {
+    font-size: 1.25rem;
+  }
+}

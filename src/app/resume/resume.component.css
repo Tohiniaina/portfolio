@@ -9,7 +9,7 @@
   left: 50%;
   width: 140px;
   height: 7px;
-  background-color: #cea255e9;
+  background-color: var(--accent-gold);
   transform: translateX(-50%);
 }
 
