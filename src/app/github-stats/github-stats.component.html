@@ -1,0 +1,24 @@
+<div class="github-section" id="github">
+  <div class="container">
+    <div class="github-content">
+      <p class="section-label">04. Activité</p>
+      <h2 class="section-title">Contributions GitHub</h2>
+      <p class="section-subtitle">Un aperçu en direct de mon activité de développement sur l'année passée.</p>
+
+      <div class="github-card">
+        <div class="github-card-header">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/{{githubUsername}}" target="_blank">&#64;{{githubUsername}}</a>
+        </div>
+        <div class="chart-wrapper">
+          <img [src]="chartUrl" alt="Graphique des contributions GitHub de Léo Randriantahina" class="github-chart" loading="lazy">
+        </div>
+      </div>
+
+      <div class="github-stats-grid">
+        <img [src]="statsCardUrl" alt="Statistiques GitHub" class="stats-card" loading="lazy">
+        <img [src]="streakCardUrl" alt="Streak de contributions GitHub" class="stats-card" loading="lazy">
+      </div>
+    </div>
+  </div>
+</div>

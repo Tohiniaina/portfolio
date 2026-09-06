@@ -1,0 +1,24 @@
+<div class="project-card">
+  <div class="project-header">
+    <span class="project-index">{{ (index + 1) | number:'2.0' }}</span>
+    <a href="{{project.projectLink}}" target="_blank" class="project-link-icon" aria-label="Voir le code sur GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+
+  <div class="project-content">
+    <h3 class="project-title">{{project.name}}</h3>
+    <p class="project-description">{{project.description}}</p>
+
+    <div class="project-tech">
+      <span class="tech-tag" *ngIf="project.frontEnd">{{project.frontEnd}}</span>
+      <span class="tech-tag" *ngIf="project.backEnd">{{project.backEnd}}</span>
+      <span class="tech-tag" *ngIf="project.database">{{project.database}}</span>
+    </div>
+
+    <a href="{{project.projectLink}}" target="_blank" class="project-link">
+      <span>Voir le code</span>
+      <i class="fa fa-arrow-right"></i>
+    </a>
+  </div>
+</div>

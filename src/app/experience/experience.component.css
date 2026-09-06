@@ -1,0 +1,113 @@
+.experience-section {
+  padding: 100px 0;
+  position: relative;
+  scroll-margin-top: 80px;
+}
+
+.experience-content {
+  max-width: 780px;
+  position: relative;
+  z-index: 1;
+}
+
+.experience-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 2rem;
+  border-left: 1px solid var(--border-color);
+}
+
+.experience-item {
+  position: relative;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.experience-timeline .experience-item:nth-child(1) { animation-delay: 0.1s; }
+.experience-timeline .experience-item:nth-child(2) { animation-delay: 0.2s; }
+.experience-timeline .experience-item:nth-child(3) { animation-delay: 0.3s; }
+
+.experience-marker {
+  position: absolute;
+  left: -2.4rem;
+  top: 0.4rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--background-dark);
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 0 4px var(--background-dark);
+}
+
+.experience-date {
+  font-family: var(--font-mono);
+  color: var(--primary-color);
+  font-size: 0.82rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.experience-title {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.experience-company {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.experience-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-description li {
+  margin-bottom: 0.4rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.experience-description li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 60px 0;
+  }
+
+  .experience-timeline {
+    padding-left: 1.25rem;
+  }
+
+  .experience-marker {
+    left: -1.65rem;
+  }
+
+  .experience-title {
+    font-size: 1.1rem;
+  }
+
+  .experience-description {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="navbar-brand" (click)="scrollToElement('top')">
+    <span class="brand-bracket"><</span><span class="highlight">Léo</span><span class="brand-bracket">/></span>
+  </div>
+
+  <div class="navbar-right">
+    <div class="navbar-links" [class.active]="menuOpen">
+      <a class="nav-link" (click)="scrollToElement('abouts')"><span class="link-text">À propos</span></a>
+      <a class="nav-link" (click)="scrollToElement('domaines')"><span class="link-text">Domaines</span></a>
+      <a class="nav-link" (click)="scrollToElement('skills')"><span class="link-text">Compétences</span></a>
+      <a class="nav-link" (click)="scrollToElement('certifications')"><span class="link-text">Certifications</span></a>
+      <!-- <a class="nav-link" (click)="scrollToElement('github')"><span class="link-text">GitHub</span></a> -->
+      <a class="nav-link" (click)="scrollToElement('experience')"><span class="link-text">Expériences</span></a>
+      <a class="nav-link" (click)="scrollToElement('projets')"><span class="link-text">Projets</span></a>
+      <a class="nav-link" (click)="scrollToElement('contact')"><span class="link-text">Contact</span></a>
+    </div>
+
+    <!--<button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="isDark ? 'Activer le mode clair' : 'Activer le mode sombre'" title="{{ isDark ? 'Mode clair' : 'Mode sombre' }}">
+      <i class="fas" [class.fa-sun]="isDark" [class.fa-moon]="!isDark"></i>
+    </button>-->
+
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <i class="fas" [class.fa-xmark]="menuOpen" [class.fa-bars]="!menuOpen"></i>
+    </div>
+  </div>
+</nav>
