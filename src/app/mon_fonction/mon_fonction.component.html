@@ -4,22 +4,38 @@
       <p class="section-label">02. Domaines</p>
       <h2 class="section-title">Ce que je fais</h2>
       <div class="functions-grid">
-        <div class="function-card">
+        <div
+          class="function-card"
+          role="button"
+          tabindex="0"
+          [class.flipped]="flippedCard === 0"
+          [attr.aria-expanded]="flippedCard === 0"
+          (click)="toggleCard(0)"
+          (keydown.enter)="toggleCard(0)"
+          (keydown.space)="toggleCard(0); $event.preventDefault()">
           <div class="card-inner">
             <div class="card-front">
-              <i class="fas fa-code text-white"></i>
+              <i class="fas fa-code" aria-hidden="true"></i>
               <h3>Développement</h3>
             </div>
             <div class="card-back">
-              <p>Développement d'applications  avec les dernières technologies et frameworks modernes.</p>
+              <p>Développement d'applications avec les dernières technologies et frameworks modernes.</p>
             </div>
           </div>
         </div>
 
-        <div class="function-card">
+        <div
+          class="function-card"
+          role="button"
+          tabindex="0"
+          [class.flipped]="flippedCard === 1"
+          [attr.aria-expanded]="flippedCard === 1"
+          (click)="toggleCard(1)"
+          (keydown.enter)="toggleCard(1)"
+          (keydown.space)="toggleCard(1); $event.preventDefault()">
           <div class="card-inner">
             <div class="card-front">
-              <i class="fas fa-cogs text-white"></i>
+              <i class="fas fa-cogs" aria-hidden="true"></i>
               <h3>DevOps</h3>
             </div>
             <div class="card-back">
@@ -28,10 +44,18 @@
           </div>
         </div>
 
-        <div class="function-card">
+        <div
+          class="function-card"
+          role="button"
+          tabindex="0"
+          [class.flipped]="flippedCard === 2"
+          [attr.aria-expanded]="flippedCard === 2"
+          (click)="toggleCard(2)"
+          (keydown.enter)="toggleCard(2)"
+          (keydown.space)="toggleCard(2); $event.preventDefault()">
           <div class="card-inner">
             <div class="card-front">
-              <i class="fas fa-database text-white"></i>
+              <i class="fas fa-database" aria-hidden="true"></i>
               <h3>Data Engineering</h3>
             </div>
             <div class="card-back">

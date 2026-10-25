@@ -18,6 +18,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { MonFonctionComponent } from './mon_fonction/mon_fonction.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { CertificationsComponent } from './certifications/certifications.component';
+import { FormationComponent } from './formation/formation.component';
 import { GithubStatsComponent } from './github-stats/github-stats.component';
 
 @NgModule({
@@ -34,6 +35,7 @@ import { GithubStatsComponent } from './github-stats/github-stats.component';
     MonFonctionComponent,
     ExperienceComponent,
     CertificationsComponent,
+    FormationComponent,
     GithubStatsComponent
   ],
   imports: [

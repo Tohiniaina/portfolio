@@ -1,6 +1,11 @@
-<div id="top">
-    <button class="scroll-top-btn" onclick="document.getElementById('top')?.scrollIntoView({behavior:'smooth'})">
-      <i class="fas fa-arrow-up"></i>
+<div>
+    <button
+      *ngIf="showScrollTop"
+      type="button"
+      class="scroll-top-btn"
+      aria-label="Revenir en haut de la page"
+      (click)="scrollToTop()">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
     <app-header></app-header>
     <app-home></app-home>
@@ -9,6 +14,7 @@
     <app-portfolio></app-portfolio>
     <!-- <app-github-stats></app-github-stats> -->
     <app-experience></app-experience>
+    <app-formation></app-formation>
     <app-certifications></app-certifications>
     <app-projets></app-projets>
     <app-contact></app-contact>

@@ -1,0 +1,79 @@
+.formation-section {
+  padding: 100px 0;
+  position: relative;
+  scroll-margin-top: 80px;
+}
+
+.formation-content {
+  max-width: 780px;
+  position: relative;
+  z-index: 1;
+}
+
+.formation-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 2rem;
+  border-left: 1px solid var(--border-color);
+}
+
+.formation-item {
+  position: relative;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.formation-marker {
+  position: absolute;
+  left: -2.4rem;
+  top: 0.4rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--background-dark);
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 0 4px var(--background-dark);
+}
+
+.formation-date {
+  font-family: var(--font-mono);
+  color: var(--primary-color);
+  font-size: 0.82rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.formation-title {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.formation-school {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .formation-section {
+    padding: 60px 0;
+  }
+
+  .formation-timeline {
+    padding-left: 1.25rem;
+  }
+
+  .formation-marker {
+    left: -1.65rem;
+  }
+
+  .formation-title {
+    font-size: 1.1rem;
+  }
+}

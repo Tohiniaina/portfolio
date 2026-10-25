@@ -1,24 +1,75 @@
 <div class="project-card">
   <div class="project-header">
-    <span class="project-index">{{ (index + 1) | number:'2.0' }}</span>
-    <a href="{{project.projectLink}}" target="_blank" class="project-link-icon" aria-label="Voir le code sur GitHub">
-      <i class="fab fa-github"></i>
+    <span class="project-index">
+      {{ (index + 1) | number:'2.0' }}
+    </span>
+
+    <!-- Icône GitHub active si le lien existe -->
+    <a
+      *ngIf="project.projectLink; else disabledGithub"
+      [href]="project.projectLink"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="project-link-icon"
+      aria-label="Voir le code sur GitHub">
+      <i class="fab fa-github" aria-hidden="true"></i>
     </a>
+
+    <!-- Icône GitHub désactivée si le lien est vide -->
+    <ng-template #disabledGithub>
+      <span
+        class="project-link-icon disabled"
+        aria-label="Code source non disponible"
+        title="Code source non disponible"
+        aria-disabled="true">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </span>
+    </ng-template>
   </div>
 
   <div class="project-content">
-    <h3 class="project-title">{{project.name}}</h3>
-    <p class="project-description">{{project.description}}</p>
+    <h3 class="project-title">
+      {{ project.name }}
+    </h3>
+
+    <p class="project-description">
+      {{ project.description }}
+    </p>
 
     <div class="project-tech">
-      <span class="tech-tag" *ngIf="project.frontEnd">{{project.frontEnd}}</span>
-      <span class="tech-tag" *ngIf="project.backEnd">{{project.backEnd}}</span>
-      <span class="tech-tag" *ngIf="project.database">{{project.database}}</span>
+      <span class="tech-tag" *ngIf="project.frontEnd">
+        {{ project.frontEnd }}
+      </span>
+
+      <span class="tech-tag" *ngIf="project.backEnd">
+        {{ project.backEnd }}
+      </span>
+
+      <span class="tech-tag" *ngIf="project.database">
+        {{ project.database }}
+      </span>
     </div>
 
-    <a href="{{project.projectLink}}" target="_blank" class="project-link">
+    <!-- Lien actif si projectLink existe -->
+    <a
+      *ngIf="project.projectLink; else disabledCodeLink"
+      [href]="project.projectLink"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="project-link">
       <span>Voir le code</span>
-      <i class="fa fa-arrow-right"></i>
+      <i class="fas fa-arrow-right" aria-hidden="true"></i>
     </a>
+
+    <!-- Version désactivée si projectLink est vide -->
+    <ng-template #disabledCodeLink>
+      <span
+        class="project-link disabled"
+        aria-disabled="true"
+        title="Code source non disponible">
+        <i class="fas fa-lock" aria-hidden="true"></i>
+        <span>Code non disponible</span>
+      </span>
+    </ng-template>
   </div>
 </div>

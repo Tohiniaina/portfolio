@@ -19,12 +19,19 @@ html[data-theme="light"] .navbar {
 }
 
 .navbar-brand {
+  display: inline-flex;
+  align-items: center;
   font-family: var(--font-mono);
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   cursor: pointer;
   user-select: none;
+  color: inherit;
+}
+
+.navbar-brand:hover {
+  opacity: 1;
 }
 
 .brand-bracket {
@@ -64,10 +71,16 @@ html[data-theme="light"] .nav-link {
   font-weight: 500;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   color: var(--text-primary);
   background: var(--surface-elevated);
   opacity: 1;
+}
+
+.nav-link.active,
+html[data-theme="light"] .nav-link.active {
+  color: var(--primary-color);
 }
 
 .menu-toggle {
@@ -77,6 +90,13 @@ html[data-theme="light"] .nav-link {
   color: var(--text-primary);
   padding: 0.25rem 0.5rem;
   user-select: none;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-sm);
+}
+
+.menu-toggle:hover {
+  background: var(--surface-elevated);
 }
 
 .theme-toggle {
@@ -101,7 +121,7 @@ html[data-theme="light"] .nav-link {
   background: rgba(var(--primary-rgb), 0.08);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1000px) {
   .navbar {
     padding: 0.85rem 1.25rem;
   }

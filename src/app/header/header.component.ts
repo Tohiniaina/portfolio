@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +8,36 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   menuOpen = false;
   isDark = false;
+  activeSection = '';
+
+  private readonly sectionIds = [
+    'abouts',
+    'domaines',
+    'skills',
+    'experience',
+    'formation',
+    'certifications',
+    'projets',
+    'contact'
+  ];
+
   constructor() {}
 
   ngOnInit(): void {
     const stored = localStorage.getItem('portfolio-theme');
     this.isDark = stored === null ? true : stored === 'dark';
     document.documentElement.setAttribute('data-theme', this.isDark ? 'dark' : 'light');
+    this.updateActiveSection();
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    this.updateActiveSection();
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    this.menuOpen = false;
   }
 
   toggleTheme(): void {
@@ -32,9 +56,17 @@ export class HeaderComponent implements OnInit {
     this.menuOpen = !this.menuOpen;
   }
 
-  closeMenuOnMobile(): void {
-    if (window.innerWidth <= 768) {
-      this.menuOpen = false;
+  private updateActiveSection(): void {
+    const headerOffset = 140;
+    let current = '';
+
+    for (const id of this.sectionIds) {
+      const element = document.getElementById(id);
+      if (element && element.getBoundingClientRect().top <= headerOffset) {
+        current = id;
+      }
     }
+
+    this.activeSection = current;
   }
 }

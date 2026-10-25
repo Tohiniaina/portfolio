@@ -11,7 +11,7 @@
   --surface-elevated: #171c1d;
   --text-primary: #eef1f0;
   --text-secondary: #8b9694;
-  --text-muted: #5c6664;
+  --text-muted: #7d8683;
   --border-color: rgba(255, 255, 255, 0.08);
   --border-color-strong: rgba(255, 255, 255, 0.14);
 
@@ -42,7 +42,7 @@ html[data-theme="light"] {
   --surface-elevated: #f3f6f4;
   --text-primary: #0e1512;
   --text-secondary: #56605c;
-  --text-muted: #838f8a;
+  --text-muted: #626c68;
   --border-color: rgba(14, 21, 18, 0.09);
   --border-color-strong: rgba(14, 21, 18, 0.16);
 
@@ -90,6 +90,17 @@ a {
 
 a:hover {
   opacity: 0.85;
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+[id]:not(#top) {
+  scroll-margin-top: 90px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -205,4 +216,19 @@ p {
 
 .fade-in {
   animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

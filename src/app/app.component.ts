@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ThemeService } from './_services/theme.service';
 
@@ -15,5 +15,16 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.themeService.initTheme();
   }
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    this.showScrollTop = window.scrollY > 300;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   title = 'Codex';
+  showScrollTop = false;
 }

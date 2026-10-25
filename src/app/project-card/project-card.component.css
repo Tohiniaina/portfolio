@@ -9,6 +9,23 @@
   height: 100%;
 }
 
+.project-link-icon.disabled,
+.project-link.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.project-link.disabled {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.project-link-icon.disabled {
+  color: var(--text-muted);
+}
+
 .project-card:hover {
   border-color: rgba(var(--primary-rgb), 0.3);
   transform: translateY(-4px);

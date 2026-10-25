@@ -1,3 +1,8 @@
+.certifications-section {
+  padding: 100px 0 0;
+  position: relative;
+}
+
 .certifications-content {
   max-width: 780px;
   position: relative;
@@ -6,7 +11,7 @@
 
 .certifications-grid {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .certification-card {
@@ -69,6 +74,12 @@
   font-size: 0.95rem;
   line-height: 1.7;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 60px 0 0;
+  }
 }
 
 @media (max-width: 640px) {

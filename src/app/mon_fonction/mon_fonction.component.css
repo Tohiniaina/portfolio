@@ -33,7 +33,9 @@
   transform-style: preserve-3d;
 }
 
-.function-card:hover .card-inner {
+.function-card:hover .card-inner,
+.function-card.flipped .card-inner,
+.function-card:focus-visible .card-inner {
   transform: rotateY(180deg);
 }
 
