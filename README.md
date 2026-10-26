@@ -1,27 +1,34 @@
-# MyApp
+# Portfolio - Léo Randriantahina
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
+Portfolio personnel de Léo Randriantahina, Data Engineer & Software Developer. Présente mes projets, expériences, formations, certifications et compétences.
 
-## Development server
+Ce projet est généré avec [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Développement
 
-## Code scaffolding
+```bash
+npm install
+npm start
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+L'application sera disponible sur `http://localhost:4200/`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm run build
+```
 
-## Running unit tests
+Les artefacts de build sont générés dans le répertoire `dist/`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Tests
 
-## Running end-to-end tests
+```bash
+npm test
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Exécute les tests unitaires via [Karma](https://karma-runner.github.io).
 
-## Further help
+## Déploiement
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Le dossier `docs/` contient la version buildée pour GitHub Pages. Après un build, copier le contenu de `dist/` vers `docs/` si nécessaire.
