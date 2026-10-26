@@ -16,10 +16,10 @@
         </p>
 
         <div class="profile-actions">
-          <a class="btn-primary" [href]="cvFilePath" download="Léo_Randriantahina_CV.pdf">
+          <button class="btn-primary" (click)="downloadCV()" type="button">
             <i class="fas fa-download" aria-hidden="true"></i>
             <span>Télécharger le CV</span>
-          </a>
+          </button>
           <a class="btn-secondary" href="#projets" (click)="scrollToProjects(); $event.preventDefault()">
             <span>Voir mes projets</span>
             <i class="fas fa-arrow-right" aria-hidden="true"></i>

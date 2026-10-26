@@ -23,4 +23,13 @@ export class HomeComponent implements OnInit {
   scrollToProjects(): void {
     document.getElementById('projets')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
+
+  downloadCV(): void {
+    const link = document.createElement('a');
+    link.href = this.cvFilePath;
+    link.download = 'Léo_Randriantahina_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 }
